@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A boilerplate for ExpressJS coupled with TypeScript",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "start": "node -r dotenv/config dist/index.js",

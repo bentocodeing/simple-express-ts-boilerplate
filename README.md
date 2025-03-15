@@ -90,4 +90,4 @@ PORT=3000              # Port number for the server to listen on
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
