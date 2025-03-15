@@ -16,7 +16,7 @@ app.get('/health', (req: Request, res: Response) => {
 });
 
 app.get('/example', (req: Request, res: Response) => {
-  // @ts-expect-error
+  // @ts-expect-error - This is a test error
   function sum(a, b: number) {
     return a + b;
   }
