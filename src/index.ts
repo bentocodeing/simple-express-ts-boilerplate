@@ -8,6 +8,18 @@ const port = env.PORT;
 const nodeEnv = env.NODE_ENV;
 
 app.get('/', (req: Request, res: Response) => {
+  res.send('Hello World!');
+});
+
+app.get('/health', (req: Request, res: Response) => {
+  res.status(200).json({ status: 'ok' });
+});
+
+app.get('/example', (req: Request, res: Response) => {
+  // @ts-expect-error
+  function sum(a, b: number) {
+    return a + b;
+  }
   const querySchema = z.object({
     name: z.string({
       required_error: 'Name is required',
@@ -21,10 +33,6 @@ app.get('/', (req: Request, res: Response) => {
   const { name } = queryParse.data;
   const message = `Hello ${name}!`;
   res.send(message);
-});
-
-app.get('/health', (req: Request, res: Response) => {
-  res.status(200).json({ status: 'ok' });
 });
 
 app.listen(port, () => {
