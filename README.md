@@ -23,7 +23,7 @@ A modern, well-structured boilerplate for building Express.js applications with 
 
 ```bash
 git clone <repository-url>
-cd david-boilerplate-express
+cd simple-express-ts-boilerplate
 ```
 
 2. Install dependencies:
